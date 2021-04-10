@@ -1,0 +1,27 @@
+{
+  "name": "@soonspacejs/ca-vue-template",
+  "version": "0.0.1",
+  "keywords": [
+    "soonspacejs",
+    "create-soonspacejs-app",
+    "template",
+    "vue"
+  ],
+  "description": "The base template for Create Vue-SoonSpace App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soonspacejs/create-app.git",
+    "directory": "packages/ca-vue-template"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/soonspacejs/create-app/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
