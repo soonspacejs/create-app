@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/@soonspacejs/*",
+    "packages/soonspacejs"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "fs-extra": "^9.1.0",
+    "inquirer": "^8.0.0"
+  }
+}
