@@ -1,9 +1,11 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <div class="left-layout">
+      <img alt="Vue logo" src="./assets/logo.png" />
+      <HelloWorld msg="Welcome to Your Vue.js App" />
+    </div>
     <vue-soonspace
-      :customStyle="{ height: '500px' }"
+      :customStyle="{ width: '50vw', height: '100vh', float: 'right' }"
       :options="{ showGrid: true }"
       @sceneReady="sceneReady"
     />
@@ -65,12 +67,24 @@ export default {
 </script>
 
 <style>
+* {
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.left-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  float: left;
 }
 </style>
