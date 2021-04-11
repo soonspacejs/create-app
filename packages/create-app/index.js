@@ -74,8 +74,8 @@ inquirer.prompt([
       } 
       // tsx
       else if( ReactConfig.JsxOrTsx === 'TypeScript' ) {
-        if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-react-template-soonmanager-typeScript'
-        else templatePackage = '@soonspacejs/ca-react-template-typeScript'
+        if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-react-template-soonmanager-typescript'
+        else templatePackage = '@soonspacejs/ca-react-template-typescript'
       }
     }
 
