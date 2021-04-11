@@ -89,22 +89,16 @@ inquirer.prompt([
 
 function writeInfoFile(templatePackage) {
   fse.writeJSONSync(`${root}/package.json`, {
-    name: templatePackage,
+    name: 'soonspacejs-pro-template',
     version: "0.1.0",
-    private: true
+    private: true,
+    description: `Template from ${templatePackage}.`
   })
 
-  fse.writeFileSync(`${root}/README.md`, `#${templatePackage}`)
+  fs.writeFileSync(`${root}/README.md`, `#${templatePackage}`)
+  fs.writeFileSync(`${root}/.gitignore`, fs.readFileSync('./.gitignore'))
+  fs.writeFileSync(`${root}/LICENSE`, fs.readFileSync('./LICENSE'))
 
-  try {
-    const err = fs.accessSync(`${root}/.npmignore`, fs.constants.F_OK)
-    if (err) fse.removeSync(`${root}/.npmignore`)
-
-    fs.writeFileSync(`${root}/.gitignore`, fs.readFileSync('./.gitignore'))
-    fs.writeFileSync(`${root}/LICENSE`, fs.readFileSync('./LICENSE'))
-  } catch (err) {
-    console.log(chalk.redBright('@soonspacejs/create-app: '), err)
-  }
 }
 
 function install(templatePackage) {
@@ -145,6 +139,13 @@ function install(templatePackage) {
       ],
       { stdio: 'inherit' }
     )
+  }
+
+  try {
+    const err = fs.accessSync(`${root}/.npmignore`, fs.constants.F_OK)
+    if (!err) fse.removeSync(`${root}/.npmignore`)
+  } catch (err) {
+    console.log(chalk.redBright('@soonspacejs/create-app: '), err)
   }
 
   console.log()
