@@ -191,16 +191,16 @@ function install(templatePackage) {
     const err = fs.accessSync(`${root}/.npmignore`, fs.constants.F_OK)
     if (!err) fse.removeSync(`${root}/.npmignore`)
   } catch (err) {
-    console.log(chalk.redBright('@soonspacejs/create-app: '), err)
+
   }
 
   console.log()
   console.log(chalk.greenBright(`Success: 项目 ${proName} 已安装完成!`))
-
   console.log()
   console.log('执行以下命令运行项目：')
   console.log(chalk.blueBright(`  cd ${proName}`))
   console.log(chalk.blueBright(`  npm start`))
+  console.log()
 }
 
 function shouldUseYarn() {
