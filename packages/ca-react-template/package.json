@@ -1,0 +1,27 @@
+{
+  "name": "@soonspacejs/ca-react-template",
+  "version": "0.0.2",
+  "keywords": [
+    "soonspacejs",
+    "create-soonspacejs-app",
+    "template",
+    "react"
+  ],
+  "description": "The base template for Create React-SoonSpace App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soonspacejs/create-app.git",
+    "directory": "packages/ca-react-template"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/soonspacejs/create-app/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
