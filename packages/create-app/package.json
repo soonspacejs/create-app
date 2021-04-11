@@ -1,6 +1,6 @@
 {
   "name": "@soonspacejs/create-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "soonspacejs",
     "create-soonspacejs-app",
@@ -30,5 +30,6 @@
     "fs-extra": "^9.1.0",
     "inquirer": "^8.0.0",
     "lerna": "^4.0.0"
-  }
+  },
+  "gitHead": "1434724414276c3e9f273caa77f2303dcd52c570"
 }
