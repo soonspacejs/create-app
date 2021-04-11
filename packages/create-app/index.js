@@ -96,9 +96,8 @@ function writeInfoFile(templatePackage) {
   })
 
   fs.writeFileSync(`${root}/README.md`, `#${templatePackage}`)
-  fs.writeFileSync(`${root}/.gitignore`, fs.readFileSync('./.gitignore'))
-  fs.writeFileSync(`${root}/LICENSE`, fs.readFileSync('./LICENSE'))
-
+  fs.writeFileSync(`${root}/.gitignore`, fs.readFileSync(path.resolve(__dirname + './.gitignore')))
+  fs.writeFileSync(`${root}/LICENSE`, fs.readFileSync(path.resolve(__dirname + './LICENSE')))
 }
 
 function install(templatePackage) {
