@@ -1,0 +1,28 @@
+{
+  "name": "@soonspacejs/ca-vue2-template-soonmanager",
+  "version": "0.0.2",
+  "keywords": [
+    "soonspacejs",
+    "create-soonspacejs-app",
+    "template",
+    "vue",
+    "soonmanager"
+  ],
+  "description": "The soonmanager template for Create Vue-SoonSpace App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soonspacejs/create-app.git",
+    "directory": "packages/ca-vue2-template-soonmanager"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/soonspacejs/create-app/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
