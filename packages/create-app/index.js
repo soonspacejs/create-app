@@ -5,6 +5,7 @@ const fs = require('fs')
 const fse = require('fs-extra');
 const inquirer = require('inquirer');
 const execa = require('execa');
+const chalk = require('chalk')
 
 const target = process.argv.slice(2)
 
@@ -110,7 +111,14 @@ function install(templatePackage) {
     fs.writeFileSync(`${root}/.gitignore`, ignoreData)
     fse.removeSync(`${root}/.npmignore`)
   }
+  
+  console.log()
+  console.log(chalk.greenBright(`Success: 项目 ${proName} 已安装完成!`))
 
+  console.log()
+  console.log('执行以下命令运行项目：')
+  console.log(chalk.blueBright(`  cd ${proName}`))
+  console.log(chalk.blueBright(`  npm start`))
 }
 
 function shouldUseYarn() {

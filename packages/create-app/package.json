@@ -1,6 +1,6 @@
 {
   "name": "@soonspacejs/create-app",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "keywords": [
     "soonspacejs",
     "create-soonspacejs-app",
@@ -28,6 +28,7 @@
   "dependencies": {
     "lerna": "^4.0.0",
     "fs-extra": "^9.1.0",
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "chalk": "^4.1.0"
   }
 }
