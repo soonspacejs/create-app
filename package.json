@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "release": "node ./scripts/release.js",
+    "packages:list": "lerna ls -l"
+  },
   "workspaces": [
     "packages/@soonspacejs/*",
     "packages/soonspacejs"

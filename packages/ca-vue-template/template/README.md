@@ -1,4 +1,4 @@
-# vue-soonspace-test
+# template
 
 ## Project setup
 ```
