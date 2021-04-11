@@ -5,8 +5,7 @@
     "packages:list": "lerna ls -l"
   },
   "workspaces": [
-    "packages/@soonspacejs/*",
-    "packages/soonspacejs"
+    "packages/*"
   ],
   "devDependencies": {
     "lerna": "^4.0.0",
