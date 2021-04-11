@@ -153,6 +153,7 @@ function install(templatePackage) {
       'yarn',
       [
         'add',
+        '--exact',
         templatePackage
       ],
       { stdio: 'inherit' }
@@ -162,6 +163,7 @@ function install(templatePackage) {
       'npm',
       [
         'i',
+        '--save-exact',
         templatePackage
       ],
       { stdio: 'inherit' }
