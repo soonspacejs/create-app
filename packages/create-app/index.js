@@ -68,12 +68,12 @@ inquirer.prompt([
       ])
 
       // jsx
-      if(  ReactConfig.JsxOrTsx === 'JavaScript' ) {
+      if (ReactConfig.JsxOrTsx === 'JavaScript') {
         if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-react-template-soonmanager'
         else templatePackage = '@soonspacejs/ca-react-template'
-      } 
+      }
       // tsx
-      else if( ReactConfig.JsxOrTsx === 'TypeScript' ) {
+      else if (ReactConfig.JsxOrTsx === 'TypeScript') {
         if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-react-template-soonmanager-typescript'
         else templatePackage = '@soonspacejs/ca-react-template-typescript'
       }
@@ -83,8 +83,29 @@ inquirer.prompt([
     await console.log(templatePackage)
     await console.log()
 
+    await writeInfoFile(templatePackage)
     await install(templatePackage)
   })
+
+function writeInfoFile(templatePackage) {
+  fse.writeJSONSync(`${root}/package.json`, {
+    name: templatePackage,
+    version: "0.1.0",
+    private: true
+  })
+
+  fse.writeFileSync(`${root}/README.md`, `#${templatePackage}`)
+
+  try {
+    const err = fs.accessSync(`${root}/.npmignore`, fs.constants.F_OK)
+    if (err) fse.removeSync(`${root}/.npmignore`)
+
+    fs.writeFileSync(`${root}/.gitignore`, fs.readFileSync('./.gitignore'))
+    fs.writeFileSync(`${root}/LICENSE`, fs.readFileSync('./LICENSE'))
+  } catch (err) {
+    console.log(chalk.redBright('@soonspacejs/create-app: '), err)
+  }
+}
 
 function install(templatePackage) {
   const useYarn = shouldUseYarn()
@@ -124,12 +145,6 @@ function install(templatePackage) {
       ],
       { stdio: 'inherit' }
     )
-  }
-
-  const ignoreData = fs.readFileSync(`${root}/.npmignore`, 'utf-8')
-  if (ignoreData) {
-    fs.writeFileSync(`${root}/.gitignore`, ignoreData)
-    fse.removeSync(`${root}/.npmignore`)
   }
 
   console.log()
