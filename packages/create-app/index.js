@@ -57,11 +57,31 @@ inquirer.prompt([
     }
     // React
     else if (selectVal.VueOrReact === 'React') {
-      if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-react-template-soonmanager'
-      else templatePackage = '@soonspacejs/ca-react-template'
+      const ReactConfig = await inquirer.prompt([
+        {
+          name: 'JsxOrTsx',
+          message: '选择开发语言',
+          type: 'list',
+          choices: ['JavaScript', 'TypeScript'],
+          default: 'JavaScript'
+        },
+      ])
+
+      // jsx
+      if(  ReactConfig.JsxOrTsx === 'JavaScript' ) {
+        if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-react-template-soonmanager'
+        else templatePackage = '@soonspacejs/ca-react-template'
+      } 
+      // tsx
+      else if( ReactConfig.JsxOrTsx === 'TypeScript' ) {
+        if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-react-template-soonmanager-typeScript'
+        else templatePackage = '@soonspacejs/ca-react-template-typeScript'
+      }
     }
 
+    await console.log()
     await console.log(templatePackage)
+    await console.log()
 
     await install(templatePackage)
   })
@@ -111,7 +131,7 @@ function install(templatePackage) {
     fs.writeFileSync(`${root}/.gitignore`, ignoreData)
     fse.removeSync(`${root}/.npmignore`)
   }
-  
+
   console.log()
   console.log(chalk.greenBright(`Success: 项目 ${proName} 已安装完成!`))
 
