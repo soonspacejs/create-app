@@ -1,1 +1,1 @@
-# @soonspacejs/ca-html-template
+# @soonspacejs/ca-html-template-soonmanager
