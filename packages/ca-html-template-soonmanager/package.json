@@ -1,0 +1,27 @@
+{
+  "name": "@soonspacejs/ca-html-template",
+  "version": "0.1.7",
+  "keywords": [
+    "soonspacejs",
+    "create-soonspacejs-app",
+    "template",
+    "html"
+  ],
+  "description": "The base template for Create HTML-SoonSpace App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soonspacejs/create-app.git",
+    "directory": "packages/ca-html-template"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/soonspacejs/create-app/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}

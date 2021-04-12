@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SoonSpace Example</title>
+</head>
+
+<body style="margin: 0;">
+  <div id="view" style="position: absolute; width: 100vw; height: 100vh;"></div>
+
+  <script type="module">
+    import SoonSpace from './node_modules/soonspacejs/dist/index.esm.js'
+    import Sspx from './node_modules/@soonspacejs/plugin-sspx/dist/index.esm.js'
+
+    const ssp = new SoonSpace({
+      el: '#view',
+      options: {
+        showInfo: true
+      }
+    })
+
+    // 保存 ssp 实例
+    Sspx.add("firstSsp", ssp);
+
+    // 加载一个测试模型
+    ssp
+      .loadSbm({
+        id: "test_model",
+        url: "./model/changjing02/changjing02_1F_0.sbm",
+      })
+      .then(() => {
+        ssp.flyMainViewpoint();
+      });
+
+    // 获取已保存 ssp 实例
+    console.log("Sspx get", Sspx.get("firstSsp"));
+
+  </script>
+</body>
+
+</html>

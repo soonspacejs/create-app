@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SoonSpace Example</title>
+</head>
+
+<body style="margin: 0;">
+  <div id="view" style="position: absolute; width: 100vw; height: 100vh;"></div>
+
+  <script type="module">
+    import SoonSpace from './node_modules/soonspacejs/dist/index.esm.js'
+    import Sspx from './node_modules/@soonspacejs/plugin-sspx/dist/index.esm.js'
+    import SoonmanagerSync from "./node_modules/@soonspacejs/plugin-soonmanager-sync/dist/index.esm.js"
+
+    const ssp = new SoonSpace({
+      el: '#view',
+      options: {
+        showInfo: true
+      }
+    })
+
+    // 保存 ssp 实例
+    Sspx.add("firstSsp", ssp);
+
+    // 注册 SoonmanagerSync 插件
+    const soonmanagerSync = ssp.registerPlugin(
+      SoonmanagerSync,
+      "soonmanagerSync"
+    );
+
+    /**
+     * 设置平台数据包路径
+     * 支持 本地资源路径 和 平台在线资源路径
+     */
+    soonmanagerSync.setBaseUrl("./sceneData/testData/");
+    // soonmanagerSync.setBaseUrl('http://soon.xwbuilders.com:8066//model/f95d1b6544284e9c931a5385b5812254/')
+
+    // 设置场景全局配置
+    soonmanagerSync.setGlobalSetting();
+
+    // 开始加载场景
+    soonmanagerSync
+      .loadScene({
+        syncLoad: true,
+        LoadsPerSecond: 60,
+      })
+      .then(() => {
+        console.log("主层级加载成功！");
+        ssp.flyMainViewpoint();
+      });
+
+    // 场景全部加载完整
+    soonmanagerSync.loadSceneAllSuccess(() => {
+      console.log("全部模型加载成功！");
+    });
+
+    // 获取已保存 ssp 实例
+    console.log("Sspx get", Sspx.get("firstSsp"));
+
+  </script>
+</body>
+
+</html>

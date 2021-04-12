@@ -1708,6 +1708,13 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@robotlegsjs/signals@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@robotlegsjs/signals/-/signals-1.1.0.tgz#3e227777cdc3503c7726a15b41740b56c1c299b1"
+  integrity sha512-2fFN87/IFSZSnO3TiA+xzRVP6Ift8+/3R6vafcpzu4HYtF86158xFZt2LAMdjb8RLTnIM+Ftbrbq+iGlsmmDtQ==
+  dependencies:
+    tslib "^1.11.1"
+
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-7.1.3.tgz#80de384edfbd7bfc9101164910f86078151a3eca"
@@ -1749,6 +1756,11 @@
   integrity sha512-MZPUxrmFubI36XS1DI3qmI0YdN1gks62JtFZvxR67ljjSNCeK6U08Zx4msEWOXuofgqUt6zPHSi1H9fbjR/NRA==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
+
+"@soonspacejs/plugin-sspx@next":
+  version "2.0.0-rc.10"
+  resolved "https://registry.yarnpkg.com/@soonspacejs/plugin-sspx/-/plugin-sspx-2.0.0-rc.10.tgz#f318ebb84d3047a6010244bb19f67c69563b3b22"
+  integrity sha512-yKL4/a/oiG6fhX8bn9FFpKvJu9hX+QaR5Ehk+5ZA9YJsT5rrjvUjvJURuGctfNYPCpIVNjdenI3kEDXC94h91w==
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.2"
@@ -1903,6 +1915,11 @@
   integrity sha512-IR0iWbFkgd56Bu5ZI/ej8yQwrkCv8Qydx6RzwbKz9faXazR/+5tvYKsZQgyXJiwgpcva127YO6JcWy7YlCfofQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
+
+"@tweenjs/tween.js@^18.6.4":
+  version "18.6.4"
+  resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-18.6.4.tgz#40a3d0a93647124872dec8e0fd1bd5926695b6ca"
+  integrity sha512-lB9lMjuqjtuJrx7/kOkqQBtllspPIN+96OvTCeJ2j5FEzinoAXTdAMFnDAQT1KVPRlnYfBrqxtqP66vDM40xxQ==
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -7424,6 +7441,11 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+
 lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
@@ -9666,6 +9688,11 @@ react-scripts@4.0.3:
   optionalDependencies:
     fsevents "^2.1.3"
 
+react-soonspace@next:
+  version "2.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/react-soonspace/-/react-soonspace-2.0.0-rc.5.tgz#c67ba77ed9b04fbe9ee1929f9eb0b0e7bad94ec1"
+  integrity sha512-4OA5S4VceJtnwWT1iL7ncfzBGQXVJewFipKBNgy8cGNk+btsOXIowvjlMku/TSh+shzKzNMcQBytVyF8oVNZzA==
+
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -10532,6 +10559,16 @@ sockjs@^0.3.21:
     uuid "^3.4.0"
     websocket-driver "^0.7.4"
 
+soonspacejs@next:
+  version "2.0.0-rc.10"
+  resolved "https://registry.yarnpkg.com/soonspacejs/-/soonspacejs-2.0.0-rc.10.tgz#cc560198456e9c6fbc502ecc3be285fbb7fc56a0"
+  integrity sha512-C6BVJvfHl6ziQSakXyClniSTPAEoHjVy+bq8c2ypmNCIe+xmfqPmqYi3z6q8EjqCCVbHkyKPu6PyfsZnQ3v7ZA==
+  dependencies:
+    "@robotlegsjs/signals" "^1.1.0"
+    "@tweenjs/tween.js" "^18.6.4"
+    lodash.throttle "^4.1.1"
+    three "^0.124.x"
+
 sort-keys@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-1.1.2.tgz#441b6d4d346798f1b4e49e8920adfba0e543f9ad"
@@ -11135,6 +11172,11 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+three@^0.124.x:
+  version "0.124.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.124.0.tgz#14ab1a26ba6c56e51190e1b55695cd3c1e69ea55"
+  integrity sha512-ROXp1Ly7YyF+jC910DQyAWj++Qlw2lQv0qwYLNQwdDbjk4bsOXAfGO92wYTMPNei1GMJUmCxSxc3MjGBTS09Rg==
+
 throat@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"
@@ -11270,6 +11312,11 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
+
+tslib@^1.11.1:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tsutils@^3.17.1:
   version "3.17.1"
