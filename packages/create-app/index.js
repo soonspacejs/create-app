@@ -16,10 +16,10 @@ process.chdir(root)
 
 inquirer.prompt([
   {
-    name: 'VueOrReact',
-    message: '使用 Vue 还是 React ?',
+    name: 'Frame',
+    message: '选择框架环境',
     type: 'list',
-    choices: ['Vue', 'React'],
+    choices: ['Html', 'Vue', 'React'],
     default: 'Vue'
   },
   {
@@ -32,8 +32,13 @@ inquirer.prompt([
   .then(async selectVal => {
     let templatePackage = '@soonspacejs/ca-vue-template'
 
+    // Html
+    if(selectVal.Frame === 'Vue') {
+      if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-html-template-soonmanager'
+      else templatePackage = '@soonspacejs/ca-html-template'
+    }
     // Vue
-    if (selectVal.VueOrReact === 'Vue') {
+    else if (selectVal.Frame === 'Vue') {
       const VueConfig = await inquirer.prompt([
         {
           name: 'VueVersion',
@@ -56,7 +61,7 @@ inquirer.prompt([
       }
     }
     // React
-    else if (selectVal.VueOrReact === 'React') {
+    else if (selectVal.Frame === 'React') {
       const ReactConfig = await inquirer.prompt([
         {
           name: 'JsxOrTsx',
