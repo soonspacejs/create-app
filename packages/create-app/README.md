@@ -1,1 +1,1 @@
-# @soonspacejs/craete-app
+# @soonspacejs/create-app
