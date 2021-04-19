@@ -33,7 +33,7 @@ inquirer.prompt([
     let templatePackage = '@soonspacejs/ca-vue-template'
 
     // Html
-    if(selectVal.Frame === 'Vue') {
+    if(selectVal.Frame === 'Html') {
       if (selectVal.IsUseSoonmanager) templatePackage = '@soonspacejs/ca-html-template-soonmanager'
       else templatePackage = '@soonspacejs/ca-html-template'
     }
