@@ -1,16 +1,16 @@
 {
   "name": "@soonspacejs/create-app",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "keywords": [
     "soonspacejs",
     "create-soonspacejs-app",
     "template"
   ],
-  "description": "Create SoonSpace apps with no build configuration.",
+  "description": "Create SoonSpace apps with zero configuration.",
   "repository": {
     "type": "git",
     "url": "https://github.com/soonspacejs/create-app.git",
-    "directory": "packages/craete-app"
+    "directory": "packages/create-app"
   },
   "license": "MIT",
   "engines": {

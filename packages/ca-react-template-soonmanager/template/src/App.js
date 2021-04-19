@@ -65,7 +65,7 @@ function App() {
         </a>
       </header>
       <ReactSoonspace
-        style={{ width: '50vw', height: '100vh', float: 'right' }}
+        style={{ width: '50vw', height: '100vh' }}
         options={{ showGrid: true }}
         events={{
           modelClick(param) {
