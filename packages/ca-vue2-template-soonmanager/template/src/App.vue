@@ -43,21 +43,31 @@ export default {
       // 设置场景全局配置
       soonmanagerSync.setGlobalSetting();
 
-      // 开始加载场景
+      // 加载场景
       soonmanagerSync
         .loadScene({
-          syncLoad: true,
-          LoadsPerSecond: 60,
+          /**
+           * 指定开始加载的树节点 ID
+           *   未指定或指定为空，从根节点开始加载场景
+           *   指定的 ID 无法命中节点，不会加载任何模型
+           */
+          // targetId: 'xxxxx',
+
+          /**
+           * 从指定节点开始，设置广度遍历加载多少层子集模型
+           *   不设置时加载全部层级子集
+           */
+          // targetLevel: 2,
+
+          /**
+           * 是否利用页面交互空闲时间去加载剩余模型
+           */
+          isIdleRest: true,
         })
         .then(() => {
-          console.log("主层级加载成功！");
+          console.log("加载成功！");
           ssp.flyMainViewpoint();
         });
-
-      // 场景全部加载完整
-      soonmanagerSync.loadSceneAllSuccess(() => {
-        console.log("全部模型加载成功！");
-      });
 
       // 获取已保存 ssp 实例
       console.log("Sspx get", Sspx.get("firstSsp"));
