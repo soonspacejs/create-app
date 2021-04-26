@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@soonspacejs/plugin-soonmanager-sync": "next",
+    "@soonspacejs/plugin-soonmanager-sync": "^2.0.0-rc.26",
     "@soonspacejs/plugin-sspx": "next",
     "core-js": "^3.6.5",
     "soonspacejs": "next",

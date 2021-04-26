@@ -47,9 +47,15 @@ function App() {
          * 是否利用页面交互空闲时间去加载剩余模型
          */
         isIdleRest: true,
+        /**
+         * 当前 loadScene 加载模型全部完成的回调 
+         */
+        loadSceneAllSuccess: () => {
+          console.log('全部加载成功')
+        }
       })
       .then(() => {
-        console.log("加载成功！");
+        console.log("主层级加载成功！");
         ssp.flyMainViewpoint();
       });
 

@@ -942,10 +942,10 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.2.tgz#a53515db25d8038374381b73af20bb4f2e508d87"
   integrity sha512-T7VNNlYVM1SgQ+VsMYhnDkcGmWhQdL0bDyGm5TlQ3GBXnJscEClUUOKduWTmm2zCnvNLC1hc3JpuXjs/nFOc5w==
 
-"@soonspacejs/plugin-soonmanager-sync@next":
-  version "2.0.0-rc.10"
-  resolved "https://registry.yarnpkg.com/@soonspacejs/plugin-soonmanager-sync/-/plugin-soonmanager-sync-2.0.0-rc.10.tgz#bbe7a1a1c03b966df3daf682803007e91545e082"
-  integrity sha512-LFSOBuiauUC8xBB/Y1DXnV/BQHXC3TxMCwQ4GPBhiqA0jpAWfK5s2YMlPAtJaYQ/u42Mh3kX+dkPUuzDOsWIwg==
+"@soonspacejs/plugin-soonmanager-sync@^2.0.0-rc.26":
+  version "2.0.0-rc.26"
+  resolved "https://registry.yarnpkg.com/@soonspacejs/plugin-soonmanager-sync/-/plugin-soonmanager-sync-2.0.0-rc.26.tgz#c2c7278878cbd091412571b69b108a69ef5557d6"
+  integrity sha512-YKmKxxNirptMgCb+Zsv1LllgCBmTmqScFUbce02jYEc6/l775v1pFXb313xDHwZv0Oi3L74oS09GHScxinE0Hg==
 
 "@soonspacejs/plugin-sspx@next":
   version "2.0.0-rc.10"

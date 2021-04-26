@@ -2,28 +2,26 @@ import React from 'react';
 import logo from './logo.svg';
 import SoonSpace from 'soonspacejs';
 import ReactSoonspace from 'react-soonspace';
-import Sspx from "@soonspacejs/plugin-sspx";
-import SoonmanagerSync from "@soonspacejs/plugin-soonmanager-sync";
+import Sspx from '@soonspacejs/plugin-sspx';
+import SoonmanagerSync from '@soonspacejs/plugin-soonmanager-sync';
 import './App.css';
 
 function App() {
-
   function sceneReady(ssp: SoonSpace) {
-
     // 保存 ssp 实例
-    Sspx.add("firstSsp", ssp);
+    Sspx.add('firstSsp', ssp);
 
     // 注册 SoonmanagerSync 插件
     const soonmanagerSync = ssp.registerPlugin(
       SoonmanagerSync,
-      "soonmanagerSync"
+      'soonmanagerSync'
     );
 
     /**
      * 设置平台数据包路径
      * 支持 本地资源路径 和 平台在线资源路径
      */
-    soonmanagerSync.setBaseUrl("./sceneData/testData/");
+    soonmanagerSync.setBaseUrl('./sceneData/testData/');
     // soonmanagerSync.setBaseUrl('http://soon.xwbuilders.com:8066//model/f95d1b6544284e9c931a5385b5812254/')
 
     // 设置场景全局配置
@@ -49,29 +47,34 @@ function App() {
          * 是否利用页面交互空闲时间去加载剩余模型
          */
         isIdleRest: true,
+        /**
+         * 当前 loadScene 加载模型全部完成的回调
+         */
+        loadSceneAllSuccess: () => {
+          console.log('全部加载成功');
+        },
       })
       .then(() => {
-        console.log("加载成功！");
+        console.log('主层级加载成功！');
         ssp.flyMainViewpoint();
       });
 
     // 获取已保存 ssp 实例
-    console.log("Sspx get", Sspx.get("firstSsp"));
-
+    console.log('Sspx get', Sspx.get('firstSsp'));
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          className='App-link'
+          href='https://reactjs.org'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Learn React
         </a>
@@ -81,8 +84,8 @@ function App() {
         options={{ showGrid: true }}
         events={{
           modelClick(param) {
-            console.log('modelClick', param)
-          }
+            console.log('modelClick', param);
+          },
         }}
         sceneReady={sceneReady}
       />

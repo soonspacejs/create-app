@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@soonspacejs/plugin-soonmanager-sync": "next",
+    "@soonspacejs/plugin-soonmanager-sync": "^2.0.0-rc.26",
     "@soonspacejs/plugin-sspx": "next",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
