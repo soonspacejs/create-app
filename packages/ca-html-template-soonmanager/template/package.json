@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@soonspacejs/plugin-soonmanager-sync": "next",
-    "@soonspacejs/plugin-sspx": "next",
+    "@soonspacejs/plugin-soonmanager-sync": "2.x",
+    "@soonspacejs/plugin-sspx": "2.x",
     "serve": "^11.3.2",
-    "soonspacejs": "next"
+    "soonspacejs": "2.x"
   },
   "scripts": {
     "start": "serve ./"

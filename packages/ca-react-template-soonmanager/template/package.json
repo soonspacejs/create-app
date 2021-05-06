@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@soonspacejs/plugin-soonmanager-sync": "^2.0.0-rc.26",
-    "@soonspacejs/plugin-sspx": "next",
+    "@soonspacejs/plugin-soonmanager-sync": "2.x",
+    "@soonspacejs/plugin-sspx": "2.x",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "react-soonspace": "next",
-    "soonspacejs": "next",
+    "react-soonspace": "2.x",
+    "soonspacejs": "2.x",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
